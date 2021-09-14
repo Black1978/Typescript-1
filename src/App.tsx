@@ -2,7 +2,9 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import Card, { CardVariant } from './components/Card'
 import UserList from './components/UserList'
+import List from './components/List'
 import { IUser } from './types/types'
+import UserItem from './components/UserItem'
 const App = () => {
    const [users, setUsers] = useState<IUser[]>([])
    useEffect (() => {
@@ -29,6 +31,10 @@ const App = () => {
             >
                 Button
             </Card>
+            <List
+            items={users}
+            renderItem={(IUser) => <UserItem user={IUser} key={IUser.id}/>}
+            />
             <UserList users={users} />
         </div>
     )
