@@ -13,7 +13,7 @@ interface CardProps {
 }
 
 const Card: FC<CardProps> = ({ width, height, children, variant, onClick }) => {
-    const [state, setState] = useState(0);
+    const [state, setState] = useState<number>(0);
     return (
         <div
             style={{
