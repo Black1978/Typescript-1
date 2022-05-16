@@ -1,2 +1,2 @@
-# react app with typescript
+# React app with typescript
 
